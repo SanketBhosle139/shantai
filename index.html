@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Shantai Vruddhashram</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    
+   <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    </style>
+   <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+   
+  
+  </head >
+  <body class=" bg-amber-100">
+    <!-- header -->
+    <header id="home" >
+      <div class="max-w-screen-xl flex flex-wrap  justify-between mx-auto p-4  z-20 fixed backdrop-blur-sm">
+        <a
+          class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+        >
+        <img  class="w-14 h-14 rounded-lg" src="logo.jpeg">
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl text-amber-600 font-bold ">SHANTAI VRUDDHASHRAM</span>
+        <nav
+          class="md:ml-auto max-w-screen-xl mx-auto flex  items-center text-base justify-center pl-14"
+        >
+          <a href="#home" class="text-amber-600 font-bold mr-5 hover:text-white">Home</a>
+          <a href="#activity" class="text-amber-600 font-bold mr-5 hover:text-white">Activities</a>
+          <a href="#birth" class="text-amber-600 font-bold mr-5 hover:text-white">How It Started</a>
+          <a href="#gallery" class="text-amber-600 font-bold mr-5 hover:text-white">Gallery</a>
+          <a href="#bod" class="text-amber-600 font-bold mr-5 hover:text-white">Board of Directors</a>
+          <a href="#contact" class="text-amber-600 font-bold mr-5 hover:text-white">Get In Touch</a>
+        </nav>
+       
+      </div>
+    </header>
+
+    <!-- image -->
+    <div class="relative h-screen overflow-hidden bg-indigo-900" >
+      <img src="bg.jpeg" class="absolute object-cover w-full h-full" />
+      <div class="absolute inset-0 bg-blue opacity-100"></div>
+      <div
+  class="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40">
+        <div class="relative z-10 flex flex-col items-start lg:w-3/5 xl:w-2/5">
+          <span class="font-bold text-yellow-400 uppercase"> </span>
+          <h1 class="mt-4 text-6xl font-bold leading-tight text-white sm:text-7xl leading-5" >
+            SHANTAI VRUDHASHRAM
+            <br />
+          </h1>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="flex bg-amber-100 " id="Act">
+      <div class="mx-auto py-6 font-sans text-6xl font-bold text-amber-500 " style=" font-family: 'Sacramento', cursive;">Daily Activities</div>
+</div>
+
+    <div class="slideshow-container" id="activity">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="gallery-1.jpeg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="gallery-2.jpeg" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="gallery-3.jpeg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    
+    
+  
+  
+  
+  
+  
+       <!--history-->
+
+    <div class="flex bg-amber-100 " id="birth">
+      <div class="mx-auto py-6 font-sans text-6xl font-bold text-amber-500 " style=" font-family: 'Sacramento', cursive;">The Birth of Shantai</div>
+</div>
+<div class="flex bg-amber-100">
+  <div class="mx-auto font-sans text-1xl font-bold text-amber-500 py-2 pb-5" style="font-family: 'Merriweather', serif;">In the words of Vijay More(Ex-Mayor) </div>
+</div>
+<div class="flex bg-amber-100">
+  <p class="mx-auto py-2   text-1xl text-black-400 px-10 text-justify leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+      Mahadwar road, Belgaum, Shivaji Park mandal, undertook various social events,during one such event in the year 1997 Mr.Vijay Patil was present,impressed by the work of the mandal he decided to be a member of the mandal,thanks to his innvolvement the social events were more disciplined. we met frequently because of various such events and got close.
+  </p>
+</div>
+<div class="flex bg-amber-100">
+<p class="mx-auto py-2  text-1xl text-black-400 px-10 text-justify  leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+In the City there was a old age home.the mandal used to donate all that was  required to the old age home,but one thought always ailed me,the thought that the old age was open only to people of a specific religion.That is why I,Mr.vijay patil and various other members of the mandal,after giving much thought,decided to start a old age home which accepted people from all religions,where there was no discrimination based on religion and wealth.The residents of this home would be involved in the day to day activities of the home which would give them a sense of belonging to the home.
+</p>
+</div>
+
+<div class="flex bg-amber-100">
+  <p class="mx-auto py-2  text-1xl text-black-400 px-10 text-justify leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+We used to frequently travel to many cities and villages and visit several old age homes to watch and study how they functioned, and to have an idea of the problems that we could face, we   used to discuss about the home with our family and friends, during one such discussion my friend Mr.Vijay Patil expressed that the land where he and his family were supposed to build a farm house near Bamanvadi,is the place they should start the old age home, He and his family were aware of the suffering of senior citizens and happily agreed to build the Home at this site.
+</p>
+</div>
+
+
+<div class="flex bg-amber-100">
+  <p class="mx-auto py-2 text-1xl text-black-400 px-10 text-justify leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+
+On 6 december 1997 It was decided that the old age home will be named "Shantai Vruddhashram".In the presence of the then  DIG Arunkumar dutta,Avinash potdar,President of RotaryMr.Baburao Hunde, Bharma Patil, Mrs.Shantibai Bharma Patil the foundation was laid.It was Unanimously decided that Mr. Vijay Patil will be the president, Bhaurao Patil, Nagesh Patil, Gajanan Patil, Radheshyam Bajaj, Mahesh Mahajan, Gangadhar Arlikatti ,Sukumar Rangoli, Prakash Margale, Raju Gavali, Mohammed Kunnibhavi, Dilip Jadhav, Sunil Balekundri and I were the Board Members.
+</p>
+</div>
+<div class="flex bg-amber-100">
+  <p class="mx-auto py-2 text-1xl text-black-400 px-10 text-justify leading-loose font-semibold" style="font-family: 'Merriweather', serif;">
+The responsibility of Building 'Shantai' was given to Mr.Sudhir Murkumbi,with the help of Mr Goplarao Kukdolkar.The Building started taking shape,In the construction work, We were struggling in the construction work, in the wilderness which did not even have a road. We were ignorant to the societal hurdles as we were a collective who woul not be fazed by those who found satisfaction in disruption.
+</p>
+</div>
+<div class="flex bg-amber-100">
+  <p class="mx-auto py-2 text-1xl text-black-400 px-10 text-justify leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+We lacked knowledge on the problems which would be faced by the ashram,How doeas an Ashram Function,we had never given a thought about that legal requirements that had to be met,we only had a rough idea.That is why till the construction was completed, I , Vijay patil, Bhaurao Patil, Nagesh Patil, Vijay More, Ms. Maria Fernandes visited the 'Nivara Ashram' in Pune,to learn how it ran and to know the arrangement required. We met the Hospital staff Mr.Ramakant Kulkarni and Mr.Vinayak Bapat. Where had we come from? Why were we here? after enquirung about us and after hearing our intention Mr. Bapat and Mr. Kulkarni showed us the way out saying you are not old enough to start doing such work and saying we should be taking care of our families.We were disheartened and sat outside the ashram. After an hour Mr.Kulkarni came out and explained to us "What Bapat says is right,Dont be upset".But still Mr.Nagesh Patil requested him to atleast let us see the ashram. We saw the ashram and were grateful to Mr. Kulkarni and and Mr. Bapat.As we were leaving Mr.Kulkarni said "This service is very very tough".He showed us 
+photos of bedridden patients to try and discourage us. We stayed in the Ashram for the whole day. By exchanging ideas with each other we were able to explain our enthusiasm towards work and the urgency of this type of activity in the current time. Once they were convinced, they also cooperated as much as possible, we are grateful for that.While showing us the ashram he suggested that we should try it for a year and decide after studying carefully whether we will be able to perform this service, because old age is like second childhood.We returned after saying goodbye Mr.Kulkarni and Mr.Bapat.Far away from the city ,with no resources in the wilderness ,to build a place filled with happiness for someone who is old, we colleagues rushed to work.
+</p>
+</div>
+
+<div class="flex bg-amber-100">
+  <p class="mx-auto py-2 text-1xl text-black-400 px-10 text-justify leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+      There was not even a single tree in the vicinity. Sudhir Murkumbi and i started the construction of the shelter shed.On Occasion we carried lunch boxes for the workers and sometimes had lunch with them.A shelter of sizw 30 x 60 was erected within a year. We were striving to bring happiness to the lives of the marginalized elderly family members due to the upheaval in the family system in the society. As a result,I believe thet the constructive positive forces in the sky have motivated our work,A few highlights are recorded.
+</p>
+</div>
+
+<div class="flex bg-amber-100">
+          <p class="mx-auto py-2 text-1xl text-black-400 px-10 text-justify leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+              At that time the Union Minister Babagouda Patil provided electricity to the ashram from the industrial line in a span of just 8 days. K.E.B Officer Palsar Debareddy Sir also gave his valuable help. I and my Wife Maria took upon the responsibility of starting and maintaining the ashram.The First elder to enter the ashram was Madhukar  Khadilkar followed by Lakshmibai Ghorpade, followed by Amma, myself and wife Maria.In this way the family of Shantai Old age home started to come into being. Initially the Patil Family took responsibility for the main construction and of the monthly expenses which were around Rs-35000. Lakshmibai Ghorpade herself took the responsibility of cooking for five people and after some time Prabha,a cook from Goa took over.At the same time seeing an article in the newspaper, Mr.Nagesh Chougule took the tasl of managing the ashram.He used to come every morning and leave in the evening.After realizing a lot of time was being wasted in commute, he decided to stay in the ashram for four days and three days with his family. After some time Sir took over the whole operation of the ashram, visiting his family once a month.Later at the age of 70,he learned to drive a car, This made it easy for him to run errands and taking elderly people to the Hospital.
+      </p>
+      </div>
+</p>
+</div>
+
+<div class="flex bg-amber-100">
+  <p class="mx-auto py-2 text-1xl text-black-400 px-10 text-justify pb-6 leading-loose font-semibold" style="font-family: 'Merriweather', serif;" >
+      Mass prayer at 6:30 am,breakfast at 8:30 am, lunch at 12:30 pm, tea at 4 pm and then Dinner at 8 pm,The Ashram started to have a simple routine.Chougule Sir has the Lions share in the Formation of the ashram.I respectfully Mention this and express my gratitude towards them.
+      On behalf of Shantai Vruddhashram we would like to extend our heartfelt gratitude to JNMC, Bharatesh Medical College, Maratha Mandal Dental College, Jain University and various other colleges for their invaluable support and partnership in our mission to make a positive impact in our community and beyond.
+</p>
+</div>
+<div class="flex bg-amber-100 ">
+  <a href="kulkatha.pdf" target="_blank" class="mx-auto py-6 font-sans text-2xl font-bold text-amber-500 " style="font-family: 'Merriweather', serif;" >Learn More</a>
+</div>
+
+
+
+   
+<!-- gallery -->
+<section class="text-gray-600 body-font" id="gallery">
+  <div class="flex bg-amber-100 ">
+    <div class="mx-auto py-6 font-sans text-6xl font-bold text-amber-500 " style=" font-family: 'Sacramento', cursive;">Gallery</div>
+</div>
+    <div class="flex flex-wrap md:-m-2 -m-1">
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="entrance.jpeg">
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="Ganesh.jpg">
+        </div>
+        <div class="md:p-2 p-1 w-full">
+          <img alt="gallery" class="w-full h-full object-cover object-center block rounded-lg" src="hall.jpeg">
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-full">
+          <img alt="gallery" class="w-full h-full object-cover object-center block rounded-lg" src="gallery-6.jpeg">
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="gallery-5.jpeg">
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="dining.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+
+
+
+  <!---BOD--->
+  <section class="text-amber-500 body-font my-5 pt-6 " id="bod" >
+    <div class="flex justify-center h-10">
+        <h2 class="mx-auto py-2 text-6xl text-black-400 px-10 text-justify pb-6 leading-loose font-semibold" style=" font-family: 'Sacramento', cursive;">Board Of Directors</h2>
+    </div>
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full"> 
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="Vijay patil.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">President</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Vijay Bharama Patil</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="Vijay More.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Working President</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Vijay More</h2>
+          </div>
+        </div>
+       
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="santosh mamdapur.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Santosh Mamdapur</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="nagesh patil.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Nagesh Patil</h2>
+          </div>
+        </div>
+       
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="Mohammed kunnibhavi.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Mohammed Kunnibhavi</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="vasant baliga.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Vasant Baliga</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="raju gavali.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Raju Gavali</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="Bhagwan walvekar.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Bhagwan Walvekar</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="Vijaya patil.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mrs Vijaya Vijay Patil</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="alanmore.jpeg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Allan Vijay More</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="parashuram patil.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Parashuram Patil</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="Vinayak patil.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Vinayak Vijay Patil</h2>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="vikeshpatil.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-s tracking-widest title-font mb-1">Director</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mr Vikesh Patil</h2>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+    <!-- map -->
+   <div id="container" >
+    <h1 class="mx-auto text-amber-500 py-2 text-6xl text-black-400 px-10 text-justify pb-6 leading-loose font-semibold"  style=" font-family: 'Sacramento', cursive;" id="contact">Way To Shantai Vruddhashram</h1>
+   <iframe class="pb-8 border-solid rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15357.534640408472!2d74.45147499912215!3d15.783711466212502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf658d7f7fe9f7%3A0xee8994ba172f6a68!2sShantai%20(Shantamma)%20Vruddhashrama!5e0!3m2!1sen!2sin!4v1677838243742!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+   <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+    <div class="lg:w-1/2 px-6">
+      <h2 class="title-font font-semibold font-sans text-gray-900 tracking-widest text-xs"  style="font-family: 'Merriweather', serif;">ADDRESS</h2>
+      <p class="mt-1">Jamboti Road, Bamanvadi, Kuttalwadi.</p>
+      
+    </div>
+    <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+      <h2 class="title-font font-semibold font-sans text-gray-900 tracking-widest text-xs" style="font-family: 'Merriweather', serif;" >(Ex-mayor) Vijay More</h2>
+      <h2 class="title-font font-semibold text-gray-900 font-sans tracking-widest text-xs mt-4" style="font-family: 'Merriweather', serif;">PHONE</h2>
+      <p class="leading-relaxed">+91 98442 68687</p>
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+      
+    
+    
+      <h2 class="title-font font-semibold font-sans text-gray-900 tracking-widest text-xs" style="font-family: 'Merriweather', serif;" >Santosh Mamdapur</h2>
+      <h2 class="title-font font-semibold text-gray-900 font-sans tracking-widest text-xs mt-4" style="font-family: 'Merriweather', serif;">PHONE</h2>
+      <p class="leading-relaxed">+91 94498 37145</p>
+    </div>
+    
+  </div>
+</div>
+   
+
+   <div class="pt-3">
+    <!-- footer -->
+    <footer class="text-gray-400 bg-gray-900 body-font ">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      >
+        <a
+          class="flex title-font font-medium items-center md:justify-start justify-center text-white"
+        >
+        <img  class="w-14 h-14 rounded-lg" src="logo.jpeg">
+          <span class="ml-3 text-xl">SHANTAI VRUDDHASHRAM</span>
+        </a>
+        <p
+          class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"
+        >
+          © Shantai Vruddhashram -
+          <a
+            
+            class="text-gray-500 ml-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Second Childhood</a
+          >
+          
+        </p>
+        <span
+          class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+        >
+          <a class="text-gray-400" href="https://www.facebook.com/shantaivruddhashram">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              ></path>
+            </svg>
+          </a>
+          
+            
+          
+          <a class="ml-3 text-gray-400" href="https://www.instagram.com/shantai_second_childhood/">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              ></path>
+            </svg>
+          </a>
+          
+          
+        </span>
+        <p class="ml-3 text-gray-400 text-xs">Created by Sammed Khemalapure | Sumedh Patil | Sanket Bhosle</p>
+      </div>
+    </footer>
+  </body>
+</html>
